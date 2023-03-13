@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="profileSecurityVM" type="com.nemanjasapplication.app.modules.profilesecurity.data.viewmodel.ProfileSecurityVM"/>
+    </data>
+    <ScrollView android:clipToPadding="false"
+        android:fillViewport="true"
+        android:id="@+id/scrollViewScrollview"
+        android:layout_height="match_parent" android:layout_width="match_parent">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnchangepassword"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtChangepassword"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{profileSecurityVM.profileSecurityModel.txtChangepassword}"
+                style="@style/txtLatoregular13" tools:text="@string/lbl_change_password"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearColumncurrentpasswor"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_23pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylecornerRadius">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCurrentpasswor"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{profileSecurityVM.profileSecurityModel.txtCurrentpasswor}"
+                    style="@style/txtLatoregular13_3" tools:text="@string/msg_current_passwor"/>
+                <EditText
+                    android:background="@drawable/rectangle_bg_gray_50_radius_8"
+                    android:ellipsize="end"
+                    android:hint="@string/lbl_password"
+                    android:id="@+id/etGroup5627"
+                    android:inputType="textPassword"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_14pxv"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_13pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_24pxh"
+                    android:paddingTop="@dimen/_17pxv"
+                    android:singleLine="true"
+                    android:text="@={profileSecurityVM.profileSecurityModel.etGroup5627Value}"
+                    android:textColorHint="@color/bluegray_400"
+                    style="@style/etSolidRounded" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearColumnnewpassword"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylecornerRadius">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtNewpassword"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{profileSecurityVM.profileSecurityModel.txtNewpassword}"
+                    style="@style/txtLatoregular13_3" tools:text="@string/lbl_new_password"/>
+                <EditText
+                    android:background="@drawable/rectangle_bg_gray_50_radius_8"
+                    android:ellipsize="end"
+                    android:hint="@string/lbl_password"
+                    android:id="@+id/etGroup5627One"
+                    android:inputType="textPassword"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_14pxv"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_13pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_24pxh"
+                    android:paddingTop="@dimen/_17pxv"
+                    android:singleLine="true"
+                    android:text="@={profileSecurityVM.profileSecurityModel.etGroup5627OneValue}"
+                    android:textColorHint="@color/bluegray_400"
+                    style="@style/etSolidRounded" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnUpdatePasswordOne"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_24pxv"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_16pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_16pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_update_password"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded_5" tools:text="@string/lbl_update_password"/>
+        </LinearLayout>
+    </ScrollView>
+</layout>

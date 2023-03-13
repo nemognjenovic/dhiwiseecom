@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="splashVM" type="com.nemanjasapplication.app.modules.splash.data.viewmodel.SplashVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameSplash"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStylewhite_A700">
+        <ImageView android:id="@+id/imageVector"
+            android:layout_gravity="start"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY" tools:ignore="ContentDescription"/>
+        <LinearLayout android:id="@+id/linearColumnshopsie"
+            android:layout_gravity="top|center"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_261pxv"
+            android:layout_marginEnd="@dimen/_79pxh"
+            android:layout_marginStart="@dimen/_79pxh"
+            android:layout_marginTop="@dimen/_261pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <TextView android:ellipsize="end" android:gravity="start"
+                android:id="@+id/txtShopsie"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_22pxh"
+                android:singleLine="true"
+                android:text="@{splashVM.splashModel.txtShopsie}"
+                style="@style/txtPlayfairDisplayplayfairdisplaymedium65" tools:text="@string/lbl_shopsie"/>
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtThebestwayto"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_22pxh"
+                android:layout_marginStart="@dimen/_22pxh"
+                android:layout_marginTop="@dimen/_24pxv"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_3pxh"
+                android:singleLine="true"
+                android:text="@{splashVM.splashModel.txtThebestwayto}"
+                style="@style/txtLatoregular14_5" tools:text="@string/msg_the_best_way_to"/>
+        </LinearLayout>
+    </FrameLayout>
+</layout>
