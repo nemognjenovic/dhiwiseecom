@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="list1RowModel" type="com.nemanjasapplication.app.modules.productdiscover.data.model.List1RowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnpullbearexclu"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylecornerRadius">
+        <TextView android:id="@+id/txtPullBearExclu"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8pxh"
+            android:layout_marginTop="@dimen/_2pxv"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="@dimen/_6pxh"
+            android:text="@{list1RowModel.txtPullBearExclu}"
+            style="@style/txtLatoregular13" tools:text="@string/msg_pull_bear_exclu"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_marginTop="@dimen/_11pxv"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{list1RowModel.txtPrice}"
+            style="@style/txtLatoregular13_1" tools:text="@string/lbl_13_99"/>
+    </LinearLayout>
+</layout>

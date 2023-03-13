@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="profileProfileInfo1VM" type="com.nemanjasapplication.app.modules.profileprofileinfo1.data.viewmodel.ProfileProfileInfo1VM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearColumnarrowleft"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar android:gravity="start"
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearNavbar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal" style="@style/groupStylewhite_1">
+                <ImageView android:id="@+id/imageArrowleft"
+                    android:layout_height="@dimen/_16pxh"
+                    android:layout_marginBottom="@dimen/_23pxv"
+                    android:layout_marginStart="@dimen/_21pxh"
+                    android:layout_marginTop="@dimen/_25pxv"
+                    android:layout_width="@dimen/_16pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowleft_gray_900"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft_gray_900"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtShopsie"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_18pxv"
+                    android:layout_marginEnd="@dimen/_166pxh"
+                    android:layout_marginStart="@dimen/_128pxh"
+                    android:layout_marginTop="@dimen/_23pxv"
+                    android:layout_weight="0.79"
+                    android:layout_width="0dp"
+                    android:lineSpacingExtra="@dimen/_6pxh"
+                    android:singleLine="true"
+                    android:text="@{profileProfileInfo1VM.profileProfileInfo1Model.txtShopsie}"
+                    style="@style/txtPlayfairDisplayplayfairdisplaybold16" tools:text="@string/lbl_shopsie"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearColumnvector"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylegray_51">
+            <FrameLayout android:id="@+id/frameStackvector"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_116pxv"
+                android:layout_marginEnd="@dimen/_122pxh"
+                android:layout_marginStart="@dimen/_122pxh"
+                android:layout_marginTop="@dimen/_32pxv" android:layout_width="@dimen/_100pxh">
+                <ImageView android:id="@+id/imageProfileimage"
+                    android:layout_gravity="top|start"
+                    android:layout_height="@dimen/_100pxv"
+                    android:layout_marginBottom="@dimen/_10pxv"
+                    android:layout_width="match_parent"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_profileimage}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_profileimage"/>
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_white_a700_radius_16"
+                    android:id="@+id/btnVector"
+                    android:layout_gravity="bottom|start"
+                    android:layout_height="@dimen/_32pxh"
+                    android:layout_marginEnd="@dimen/_31pxh"
+                    android:layout_marginStart="@dimen/_31pxh"
+                    android:layout_marginTop="@dimen/_10pxv"
+                    android:layout_width="@dimen/_32pxh"
+                    android:paddingHorizontal="@dimen/_5pxh"
+                    android:paddingVertical="@dimen/_5pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_vector_gray_900" tools:ignore="ContentDescription"/>
+            </FrameLayout>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtProfilename"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_122pxh"
+                android:layout_marginStart="@dimen/_122pxh"
+                android:layout_marginTop="@dimen/_11pxv"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.05"
+                android:lineSpacingExtra="@dimen/_4pxh"
+                android:singleLine="true"
+                android:text="@{profileProfileInfo1VM.profileProfileInfo1Model.txtProfilename}"
+                style="@style/txtLatoregular18" tools:text="@string/lbl_archie_copeland"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtCountry"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_32pxv"
+                android:layout_marginEnd="@dimen/_121pxh"
+                android:layout_marginStart="@dimen/_122pxh"
+                android:layout_marginTop="@dimen/_12pxv"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_3pxh"
+                android:singleLine="true"
+                android:text="@{profileProfileInfo1VM.profileProfileInfo1Model.txtCountry}"
+                style="@style/txtLatoregular14_5" tools:text="@string/msg_allentown_new"/>
+        </LinearLayout>
+        <com.google.android.material.tabs.TabLayout
+            android:gravity="start" android:id="@+id/tabLayoutGroup5706"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="match_parent" app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/indigo_A200" app:tabTextColor="@color/gray_600"/>
+        <androidx.viewpager2.widget.ViewPager2
+            android:gravity="center_horizontal"
+            android:id="@+id/viewPagerViewpager"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_37pxv"
+            android:layout_weight="1" android:layout_width="match_parent"/>
+    </LinearLayout>
+</layout>

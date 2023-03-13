@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="cartVM" type="com.nemanjasapplication.app.modules.cart.data.viewmodel.CartVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnmenu"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_30pxv"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowmenu"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal" style="@style/groupStylewhite_1">
+                <ImageView android:id="@+id/imageMenu"
+                    android:layout_height="@dimen/_16pxh"
+                    android:layout_marginBottom="@dimen/_26pxv"
+                    android:layout_marginStart="@dimen/_17pxh"
+                    android:layout_marginTop="@dimen/_22pxv"
+                    android:layout_width="@dimen/_20pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_menu_bluegray_101"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_menu_bluegray_101"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtShopsie"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_20pxv"
+                    android:layout_marginEnd="@dimen/_166pxh"
+                    android:layout_marginStart="@dimen/_128pxh"
+                    android:layout_marginTop="@dimen/_21pxv"
+                    android:layout_weight="0.75"
+                    android:layout_width="0dp"
+                    android:lineSpacingExtra="@dimen/_6pxh"
+                    android:singleLine="true"
+                    android:text="@{cartVM.cartModel.txtShopsie}"
+                    style="@style/txtPlayfairDisplayplayfairdisplaybold16" tools:text="@string/lbl_shopsie"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearCart"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_A700">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtMYCART"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_26pxh"
+                android:layout_marginStart="@dimen/_26pxh"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.05"
+                android:lineSpacingExtra="@dimen/_4pxh"
+                android:singleLine="true"
+                android:text="@{cartVM.cartModel.txtMYCART}"
+                style="@style/txtLatoregular18" tools:text="@string/lbl_my_cart"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerCart"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_26pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_32pxh}" tools:itemCount="2" tools:listitem="@layout/row_cart"/>
+            <View android:background="@color/gray_200"
+                android:id="@+id/lineLineSeventeen"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_1pxv"
+                android:layout_marginTop="@dimen/_98pxv" android:layout_width="@dimen/_390pxh"/>
+            <LinearLayout android:id="@+id/linearRowsubtotal"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_21pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSUBTOTAL"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_2pxv"
+                    android:layout_marginTop="@dimen/_2pxv"
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{cartVM.cartModel.txtSUBTOTAL}"
+                    style="@style/txtLatoregular14" tools:text="@string/lbl_sub_total"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPriceTwo"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_210pxh"
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:letterSpacing="0.05"
+                    android:lineSpacingExtra="@dimen/_4pxh"
+                    android:singleLine="true"
+                    android:text="@{cartVM.cartModel.txtPriceTwo}"
+                    style="@style/txtLatoregular18" tools:text="@string/lbl_111_80"/>
+            </LinearLayout>
+            <View android:background="@color/gray_200"
+                android:id="@+id/lineLineEighteen"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_1pxv"
+                android:layout_marginTop="@dimen/_21pxv" android:layout_width="@dimen/_390pxh"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnPay111Eighty"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_242pxv"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_16pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_16pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_pay_111_80"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded" tools:text="@string/lbl_pay_111_80"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

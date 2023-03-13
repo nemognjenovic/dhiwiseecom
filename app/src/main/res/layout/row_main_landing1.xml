@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="mainLanding1RowModel" type="com.nemanjasapplication.app.modules.mainlanding.data.model.MainLanding1RowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowprice"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" style="@style/groupStylecornerRadius_3">
+        <ImageView android:id="@+id/imageImageFourteen"
+            android:layout_height="@dimen/_56pxh"
+            android:layout_width="@dimen/_56pxh"
+            android:scaleType="centerCrop" circular="@{true}"
+            imageRes="@{@drawable/img_image_56x56}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_image_56x56"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnprice"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_7pxv"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_7pxv"
+            android:layout_weight="0.64" android:layout_width="0dp" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPriceFour"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{mainLanding1RowModel.txtPriceFour}"
+                style="@style/txtLatoregular13" tools:text="@string/lbl_43_90"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtCottonblackdr"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_9pxv"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_3pxh"
+                android:singleLine="true"
+                android:text="@{mainLanding1RowModel.txtCottonblackdr}"
+                style="@style/txtLatoregular12_1" tools:text="@string/msg_cotton_black_dr"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

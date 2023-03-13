@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listRowModel" type="com.nemanjasapplication.app.modules.productsearch.data.model.ListRowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearColumnsliders"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylecornerRadius">
+        <TextView android:ellipsize="end" android:gravity="start"
+            android:id="@+id/txtSliders"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="@dimen/_3pxh"
+            android:singleLine="true"
+            android:text="@{listRowModel.txtSliders}"
+            style="@style/txtLatoregular13" tools:text="@string/lbl_sliders2"/>
+    </LinearLayout>
+</layout>
